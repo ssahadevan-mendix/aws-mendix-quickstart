@@ -10,13 +10,13 @@ aws cli
 eksctl
 kubectl
 
-#Create EKS Cluster:
+# Create EKS Cluster:
 
  . ./create-cluster.sh  
 
-#Install Ingress Controller:
+# Install Ingress Controller:
 
 . ./install-aws-ngnix-controller.sh
 
-#Configure Cluster for mendix
+# Configure Cluster for mendix
 Install the Mendix components on the cluster using the instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-cli-non-interactive
