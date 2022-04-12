@@ -1,7 +1,7 @@
 eksctl create cluster \
---name sseks \
+--name ssekscluster \
 --region us-east-2 \
 --with-oidc \
 --ssh-access \
---ssh-public-key esuscakeypair
+--ssh-public-key <yourkeypair> \
 --managed
