@@ -16,6 +16,16 @@ kubectl
     Update env.sh
 
 
+env.sh:export AWS_ACCESS_KEY_ID="TODO:your-aws-access-key"
+env.sh:export AWS_SECRET_ACCESS_KEY="TODO:"
+env.sh:export AWS_DEFAULT_REGION="TODO:"
+
+   Update configure-template.yaml
+
+configure-template.yaml:    auth_user: <TODO:registry-user>
+configure-template.yaml:    auth_password: <TODO:registry-pw>
+
+
 # Do complete install
 Create an EKS cluster
 Install Nginx
