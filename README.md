@@ -24,9 +24,9 @@ Configure namespace
 
 Default is connected mode
 
-do-all.sh
-or
-do-all.sh standalone
+    do-all.sh
+
+    do-all.sh standalone
 
 
 ## Install application
