@@ -1,0 +1,35 @@
+namespace: new
+cluster_mode: connected
+mask:
+  database_plan: true
+  storage_plan: true
+  ingress: true 
+  registry: true
+  proxy: false
+  custom_tls: false
+database_plan:
+  name: dbtemp
+  type: ephemeral
+storage_plan:
+  name: sptemp
+  type: ephemeral
+ingress:
+  type: kubernetes-ingress
+  enable_tls: false
+  k8s_ingress:
+    domain: xxx.yyy
+    useCustomIngressClass: true
+    customIngressClass: nginx
+    path: /
+  service: null
+registry:
+  type: generic
+  generic_registry:
+    auth_pull_url: ssmendixrepo.jfrog.io
+    auth_push_url: ssmendixrepo.jfrog.io
+    registry_name: default-docker-virtual/mendixapp
+    enable_auth: true
+    auth_user: <TODO:registry-user>
+    auth_password: <TODO:registry-pw>
+    link_secret_to_service_account: true
+

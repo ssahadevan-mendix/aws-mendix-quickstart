@@ -11,5 +11,8 @@ install-grafana-prometheus.sh
 
 sleep 40
 
+
+echo "$0: First parameter  is : " $1
+
 ### Configure namespace for Mendix runtime
-. ./configure.sh
+. ./configure.sh $1
