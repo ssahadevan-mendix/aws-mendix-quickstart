@@ -13,10 +13,8 @@ kubectl
 
 # Configurations
 
+    Update env.sh
 
-export AWS_ACCESS_KEY_ID="TODO: your aws access key"
-export AWS_SECRET_ACCESS_KEY="TODO: your aws AWS_SECRET_ACCESS_KEY"
-export AWS_DEFAULT_REGION="TODO: your region"
 
 # Do complete install
 Create an EKS cluster
@@ -27,7 +25,7 @@ Configure namespace
 Default is connected mode
 
 do-all.sh
-
+or
 do-all.sh standalone
 
 
@@ -37,13 +35,6 @@ Install the Portfolio manager application in Standalone mode
 
 kubectl apply -f demo.yaml
 
-# Create EKS Cluster:
-
- . ./create-cluster.sh  
-
-# Install Ingress Controller:
-
-. ./install-aws-ngnix-controller.sh
 
 # Configure Cluster for mendix
 Install the Mendix components on the cluster using the instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-cli-non-interactive
