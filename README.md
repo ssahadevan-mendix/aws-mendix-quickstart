@@ -1,15 +1,17 @@
 # aws-mendix-quickstart
  AWS Mendix Private Cloud Quickstart
 
- Get an EKS Cluster stood up in AWS.
+ EKS Cluster stood up in AWS.
  Install ingress controllers
  Configure Namespace
 
 # Prerequistes:
 
-aws cli
-eksctl
-kubectl
+   aws cli
+   eksctl
+   kubectl
+
+# Note: THis has been tested on an Apple Macintosh
 
 # Configurations
 
@@ -31,10 +33,6 @@ kubectl
 
 
 # Do complete install
-Create an EKS cluster
-Install Nginx
-Install Prometheus
-Configure namespace
 
 Default is connected mode
 
