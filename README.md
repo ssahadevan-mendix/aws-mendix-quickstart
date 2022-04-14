@@ -11,14 +11,24 @@ aws cli
 eksctl
 kubectl
 
+# Configurations
+
+
+export AWS_ACCESS_KEY_ID="TODO: your aws access key"
+export AWS_SECRET_ACCESS_KEY="TODO: your aws AWS_SECRET_ACCESS_KEY"
+export AWS_DEFAULT_REGION="TODO: your region"
 
 # Do complete install
-Create a cluster
+Create an EKS cluster
 Install Nginx
 Install Prometheus
 Configure namespace
 
+Default is connected mode
+
 do-all.sh
+
+do-all.sh standalone
 
 
 ## Install application
