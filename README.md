@@ -1,17 +1,17 @@
 # aws-mendix-quickstart
  AWS Mendix Private Cloud Quickstart
 
- EKS Cluster stood up in AWS.
- Install ingress controllers
- Configure Namespace
+ Scripted install of EKS Cluster in AWS.
+ Install nginx ingress controllers
+ Configure Namespace for mendix
 
-# Prerequistes:
+## Prerequistes:
 
-   aws cli
-   eksctl
-   kubectl
+     aws cli
+     eksctl
+     kubectl
 
-# Note: THis has been tested on an Apple Macintosh
+## Note: This has been tested on an Apple Macintosh only
 
 # Configurations
 
@@ -32,7 +32,7 @@
     configure-template.yaml:    auth_password: <TODO:registry-pw>
 
 
-# Do complete install
+## Install and configure
 
 Default is connected mode
 
@@ -41,11 +41,11 @@ Default is connected mode
     do-all.sh standalone
 
 
-## Install application
+## Install Mendix application
 
 Install the Portfolio manager application in Standalone mode
 
-kubectl apply -f demo.yaml
+    kubectl apply -f demo.yaml
 
 
 # Configure Cluster for mendix
