@@ -5,6 +5,10 @@
     Install nginx ingress controllers
     Configure Namespace for mendix
 
+## Sequence Diagram
+
+![Sequence Diagram](/images/sequence.png)
+
 ## Prerequistes:
 
      aws cli
