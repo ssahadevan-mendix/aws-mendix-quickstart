@@ -1,4 +1,4 @@
-# aws-mendix-quickstart
+# Aws Mendix quickstart
  AWS Mendix Private Cloud Quickstart
 
     Scripted install of EKS Cluster in AWS.
@@ -46,6 +46,10 @@ Default is connected mode
 Install the Portfolio manager application in mode chosen above
 
     kubectl apply -f demo.yaml
+
+## Screenshots
+
+   https://github.com/ssahadevan-mendix/aws-mendix-quickstart/wiki
 
 
 ## References
