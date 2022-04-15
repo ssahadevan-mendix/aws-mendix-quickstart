@@ -44,6 +44,11 @@ Default is connected mode
 
     do-all.sh standalone
 
+## Configure demo.yaml with lb external ip
+    update demo.yaml with your external ip address
+    
+    appURL: demo.<TODO:lb-external-ip>.nip.io
+
 
 ## Install Mendix application
 

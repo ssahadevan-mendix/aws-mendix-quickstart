@@ -23,7 +23,7 @@ spec:
     mxAdminPassword: cGFzc1cwcmQk
   runtimeMetricsConfiguration: {}
   sourceURL: https://demo-storage-d1eyl9oe4fo8ph151641-staging.s3.us-east-2.amazonaws.com/public/Main+line-0.0.0.6.mda
-  appURL: demo.18.117.43.140.nip.io # URL to access the app
+  appURL: demo.<TODO:lb-external-ip>.nip.io 
   sourceVersion: 0.0.0.6
   storage:
     servicePlan: sptemp
