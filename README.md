@@ -4,6 +4,7 @@
     Scripted install of EKS Cluster in AWS.
     Install nginx ingress controllers
     Configure Namespace for mendix
+    Deploys a mendix application
 
 ## Sequence Diagram
 
@@ -40,21 +41,10 @@
 
 Default is connected mode
 
-    do-all.sh
+    do-all.sh connected
 
     do-all.sh standalone
 
-## Configure demo.yaml with lb external ip
-    update demo.yaml with your external ip address
-    
-    appURL: demo.<TODO:lb-external-ip>.nip.io
-
-
-## Install Mendix application
-
-Install the Portfolio manager application in mode chosen above
-
-    kubectl apply -f demo.yaml
 
 ## Screenshots
 
