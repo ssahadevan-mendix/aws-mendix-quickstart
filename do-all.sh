@@ -1,3 +1,11 @@
+#
+# Usage:
+# do-all.sh connected
+# do-all.sh standalone
+#
+#
+
+mode=get-mode.sh
 
 ### Create a cluster 
 . ./create-cluster.sh
@@ -15,4 +23,8 @@ sleep 40
 echo "$0: First parameter  is : " $1
 
 ### Configure namespace for Mendix runtime
-. ./configure.sh $1
+. ./configure.sh mode
+
+
+### Deploy the application
+kubectl apply -f demo.yaml
