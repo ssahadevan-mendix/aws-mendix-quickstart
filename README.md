@@ -48,7 +48,6 @@
     configure-template.yaml:    auth_user: <TODO:registry-user>
     configure-template.yaml:    auth_password: <TODO:registry-pw>
 
-
 ## Install and configure
 
 Default is connected mode

@@ -5,6 +5,9 @@
 #
 #
 
+#Sets the Environment variables
+. ./env.sh
+
 mode=get-mode.sh
 
 ### Create a cluster 
