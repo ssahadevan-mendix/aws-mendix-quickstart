@@ -20,5 +20,5 @@ kubectl --namespace=$NAMESPACE create ingress loki-grafana \
 --rule="$grafanaDomain/*=loki-grafana:80,tls" \
 --default-backend="loki-grafana:80"
 
-#Moved to end because this creates another LB
-#kubectl apply -f expose-prometheus.yaml
+#Expose Prometheus
+kubectl apply -f expose-prometheus.yaml

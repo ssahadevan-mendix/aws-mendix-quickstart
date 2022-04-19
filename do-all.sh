@@ -32,5 +32,3 @@ echo "$0: First parameter  is : " $1
 ### Deploy the application
 kubectl apply -f demo.yaml
 
-### Expose Prometheus
-kubectl apply -f expose-prometheus.yaml
