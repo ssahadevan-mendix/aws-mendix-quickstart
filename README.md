@@ -17,6 +17,7 @@
      kubectl
      Access keys AWS cli
      ssh key pair for eksctl
+     mxpc-cli - It is packaged here. Download and install the appropriate version from the Mendix platform
 
 ## Note: This has been tested on an Apple Macintosh only
 
@@ -56,6 +57,30 @@ Default is connected mode
 
     do-all.sh standalone
 
+
+## Validation
+
+    kubectl get pods -n new
+
+    should show running pods ( connected mode )
+
+    demo-master-7fd5487c8-hd98k       2/2     Running   0         
+    mendix-agent-64cc6b9c67-dbcgs     1/1     Running   0          
+    mendix-operator-cc6dfcfd5-l4bl8   1/1     Running   0  
+
+## Mendix application
+  Mendix application will be available at apurl seen in the generated demo.yaml
+
+  Example:
+  appURL: demo.18.118.31.87.nip.io        
+
+## Prometheus
+   Available at the external ip address of the prometheus svc port 9090
+
+   kubectl get svc -n grafana | grep -i Loadbalancer
+
+   Example:
+   http://ab5b2c0d274690ae9d506d21ed876-1145176934.us-east-2.elb.amazonaws.com:9090/
 
 ## Screenshots
 
