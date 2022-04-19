@@ -15,6 +15,8 @@
      aws cli
      eksctl
      kubectl
+     Access keys AWS cli
+     ssh key pair for eksctl
 
 ## Note: This has been tested on an Apple Macintosh only
 
@@ -30,6 +32,16 @@
     env.sh:export AWS_SECRET_ACCESS_KEY="TODO:"
 
     env.sh:export AWS_DEFAULT_REGION="TODO:"
+
+## Update create-cluster.sh
+
+       eksctl create cluster \
+         --name ssekscluster \
+         --region us-east-2 \
+         --with-oidc \
+         --ssh-access \
+         --ssh-public-key <TODO:yourkeypair> \
+         --managed
 
 ## Update configure-template.yaml
 

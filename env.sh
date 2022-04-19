@@ -1,6 +1,7 @@
-cd ~
-. ./env.sh
-cd -
+#Set Path as required
+export PATH=$PATH:.
+echo $PATH
+
 export AWS_ACCESS_KEY_ID="TODO:your-aws-access-key"
 export AWS_SECRET_ACCESS_KEY="TODO:"
 export AWS_DEFAULT_REGION="TODO:"
