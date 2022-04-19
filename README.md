@@ -51,13 +51,13 @@
 
 ## config.sh - Update -i and -s for connected mode
 
-   Update the -i and -s values to reflect your settings
+       Update the -i and -s values to reflect your settings
 
-   echo "base install "
-   mxpc-cli base-install --namespace new  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9  --clusterMode connected  --clusterType generic
+       echo "base install "
+       mxpc-cli base-install --namespace new  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9  --clusterMode connected  --clusterType generic
 
-   echo "apply config"
-   mxpc-cli apply-config  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9 --file configure.yaml
+       echo "apply config"
+       mxpc-cli apply-config  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9 --file configure.yaml
 
 ## Install and configure
 
