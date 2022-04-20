@@ -1,7 +1,10 @@
+
+echo "Starting $0: $CLUSTER_NAME $AWS_DEFAULT_REGION $AWS_KEY_PAIR "
+
 eksctl create cluster \
---name ssekscluster \
---region us-east-2 \
+--name $CLUSTER_NAME \
+--region $AWS_DEFAULT_REGION \
 --with-oidc \
 --ssh-access \
---ssh-public-key <TODO:yourkeypair> \
+--ssh-public-key $AWS_KEY_PAIR \
 --managed

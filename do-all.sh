@@ -7,6 +7,7 @@
 
 #Sets the Environment variables
 . ./env.sh
+chmod +x *.sh
 
 mode=get-mode.sh
 

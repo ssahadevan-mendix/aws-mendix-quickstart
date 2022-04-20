@@ -34,38 +34,30 @@
 
     env.sh:export AWS_DEFAULT_REGION="TODO:"
 
-## Update create-cluster.sh
+    export AWS_KEY_PAIR="TODO:"
+    export CLUSTER_NAME="ssekscluster"
 
-       eksctl create cluster \
-         --name ssekscluster \
-         --region us-east-2 \
-         --with-oidc \
-         --ssh-access \
-         --ssh-public-key <TODO:yourkeypair> \
-         --managed
+    # Used in configure.sh
+    export MENDIX_CONFIG_IVAL="TODO:"
+    export MENDIX_CONFIG_SVAL="TODO:"
 
 ## Update configure-template.yaml
 
     configure-template.yaml:    auth_user: <TODO:registry-user>
     configure-template.yaml:    auth_password: <TODO:registry-pw>
 
-## config.sh - Update -i and -s for connected mode
+## Ensure that you can run mxpc-cli
+   Your Mac's security sesttings may prevent the downloaded mxpc-cli from executing.
 
-       Update the -i and -s values to reflect your settings
+   . ./mxpc-cli -help
 
-       echo "base install "
-       mxpc-cli base-install --namespace new  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9  --clusterMode connected  --clusterType generic
-
-       echo "apply config"
-       mxpc-cli apply-config  -i 9ae2c9e0-0544-4d6b-a221-d8ce25bdfc15 -s UVGmXR8r4454vVW9 --file configure.yaml
-
-## Install and configure
+## Create Cluster, Configure and Deploy Mendix application
 
 Default is connected mode
 
-    do-all.sh connected
-          or 
-    do-all.sh standalone
+    . ./do-all.sh connected
+          or
+    . ./do-all.sh standalone
 
 
 ## Validation

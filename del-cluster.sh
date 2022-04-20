@@ -1,1 +1,1 @@
-eksctl delete cluster --name ssekscluster --region us-east-2
+eksctl delete cluster --name $CLUSTER_NAME --region $AWS_DEFAULT_REGION
