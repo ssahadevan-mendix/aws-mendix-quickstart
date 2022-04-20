@@ -36,6 +36,8 @@
 
     export AWS_KEY_PAIR="TODO:"
     export CLUSTER_NAME="ssekscluster"
+    # Switch to create cluster or Not - Y or N
+    export CREATE_CLUSTER="Y"
 
     # Used in configure.sh
     export MENDIX_CONFIG_IVAL="TODO:"
@@ -73,7 +75,7 @@ Default is connected mode
     kubectl get pods --all-namespaces | wc -l
          17
 
-   
+
 ## Mendix application
   Mendix application will be available at apurl seen in the generated demo.yaml
 
