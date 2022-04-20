@@ -64,6 +64,9 @@ Default is connected mode
 
 ## Validation
 
+    Added validate.sh that is called at the end of do-all.sh
+    It will show if the result was Successful or not.
+    
     kubectl get pods -n new
 
     should show running pods ( connected mode )
