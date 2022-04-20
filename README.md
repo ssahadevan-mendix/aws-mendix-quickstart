@@ -64,7 +64,7 @@
 Default is connected mode
 
     do-all.sh connected
-
+          or 
     do-all.sh standalone
 
 
