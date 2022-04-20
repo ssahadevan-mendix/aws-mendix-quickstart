@@ -15,7 +15,7 @@
      aws cli
      eksctl
      kubectl
-     Access keys AWS cli
+     Access keys for AWS cli
      ssh key pair for eksctl
      mxpc-cli - It is packaged here. Download and install the appropriate version from the Mendix platform
 
