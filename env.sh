@@ -9,6 +9,8 @@ export AWS_SECRET_ACCESS_KEY="TODO:"
 export AWS_DEFAULT_REGION="TODO:"
 export AWS_KEY_PAIR="TODO:"
 export CLUSTER_NAME="ssekscluster"
+# Switch to create cluster or Not
+export CREATE_CLUSTER="Y"
 
 ## Used in configure.sh
 ## only required for connected mode -i and -s parameter
