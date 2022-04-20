@@ -33,3 +33,5 @@ echo "$0: First parameter  is : " $1
 ### Deploy the application
 kubectl apply -f demo.yaml
 
+validate.sh
+
