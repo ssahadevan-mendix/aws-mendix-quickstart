@@ -68,8 +68,12 @@ Default is connected mode
 
     demo-master-7fd5487c8-hd98k       2/2     Running   0         
     mendix-agent-64cc6b9c67-dbcgs     1/1     Running   0          
-    mendix-operator-cc6dfcfd5-l4bl8   1/1     Running   0  
+    mendix-operator-cc6dfcfd5-l4bl8   1/1     Running   0
 
+    kubectl get pods --all-namespaces | wc -l
+         17
+
+   
 ## Mendix application
   Mendix application will be available at apurl seen in the generated demo.yaml
 
