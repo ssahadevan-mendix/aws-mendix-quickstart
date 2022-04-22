@@ -26,7 +26,7 @@
 ## env.sh
 
     Update env.sh
-  
+
     export AWS_ACCESS_KEY_ID="TODO:your-aws-access-key"
     export AWS_SECRET_ACCESS_KEY="TODO:"
 
@@ -71,16 +71,10 @@ Default is connected mode
     Added validate.sh that is called at the end of do-all.sh
     It will show if the result was Successful or not.
 
-    kubectl get pods -n new
+    validate.sh - Success: Number of running pods is  16
 
-    should show running pods ( connected mode )
-
-    demo-master-7fd5487c8-hd98k       2/2     Running   0         
-    mendix-agent-64cc6b9c67-dbcgs     1/1     Running   0          
-    mendix-operator-cc6dfcfd5-l4bl8   1/1     Running   0
-
-    kubectl get pods --all-namespaces | wc -l
-         17
+    Result:
+    validate.sh - Success: Number of running demo application pods is  1
 
 
 ## Mendix application
