@@ -8,7 +8,7 @@ export AWS_SECRET_ACCESS_KEY="TODO:"
 ## Used in create-cluster.sh, del-cluster.sh
 export AWS_DEFAULT_REGION="TODO:"
 export AWS_KEY_PAIR="TODO:"
-export CLUSTER_NAME="ssekscluster"
+export CLUSTER_NAME="mxdemo"
 
 # Switch to create cluster or Not - Y or N
 export CREATE_CLUSTER="Y"
@@ -20,9 +20,10 @@ export MENDIX_CONFIG_IVAL="TODO:"
 export MENDIX_CONFIG_SVAL="TODO:"
 
 ## Registry config - configure-template.yaml is updated with this information
-export MENDIX_REGISTRY_PULL_URL="ssmendixrepo.jfrog.io"
-export MENDIX_REGISTRY_PUSH_URL="ssmendixrepo.jfrog.io"
-export MENDIX_REGISTRY_NAME="default-docker-virtual/mendixapp"
-export MENDIX_AUTH_USER="TOD:O"
+export MENDIX_REGISTRY_PULL_URL="TODO:"
+export MENDIX_REGISTRY_PUSH_URL="TODO:"
+# Note: need to escape / with \/ for sed replacements
+export MENDIX_REGISTRY_NAME="default-docker-virtual\/mendixapp"
+export MENDIX_AUTH_USER="TODO:"
 export MENDIX_AUTH_PW="TODO:"
 

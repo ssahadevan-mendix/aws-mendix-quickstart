@@ -25,9 +25,9 @@ ingress:
 registry:
   type: generic
   generic_registry:
-    auth_pull_url: ssmendixrepo.jfrog.io
-    auth_push_url: ssmendixrepo.jfrog.io
-    registry_name: default-docker-virtual/mendixapp
+    auth_pull_url: <TODO:>
+    auth_push_url: <TODO:>
+    registry_name: <TODO:>
     enable_auth: true
     auth_user: <TODO:registry-user>
     auth_password: <TODO:registry-pw>
