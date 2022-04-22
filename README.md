@@ -99,6 +99,11 @@ Default is connected mode
       configure-standalone.yaml
       demo.yaml
 
+
+## Deleting the cluster
+
+   del-cluster.sh will delete the cluster
+
 ## Screenshots
 
    https://github.com/ssahadevan-mendix/aws-mendix-quickstart/wiki
