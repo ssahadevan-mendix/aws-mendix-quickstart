@@ -10,18 +10,16 @@ mode=$defaultMode
 mode=$(get-mode.sh $1)
 echo "Mode is $mode"
 
+. ./generate-yamls.sh 
+
 if [ $mode=$defaultMode ];
 then
-  . ./get-address.sh 
-
   echo "base install "
   mxpc-cli base-install --namespace new  -i $MENDIX_CONFIG_IVAL -s $MENDIX_CONFIG_SVAL --clusterMode connected  --clusterType generic
 
   echo "apply config"
   mxpc-cli apply-config  -i $MENDIX_CONFIG_IVAL -s $MENDIX_CONFIG_SVAL --file configure.yaml 
 else 
-  . ./get-address.sh 
-
   echo "base install "
   mxpc-cli base-install --namespace new  --clusterMode standalone  --clusterType generic
 

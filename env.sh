@@ -18,3 +18,11 @@ export CREATE_CLUSTER="Y"
 ## mxpc-cli base-install --namespace new  -i $MENDIX_CONFIG_IVAL -s $MENDIX_CONFIG_SVAL --clusterMode connected  --clusterType generic
 export MENDIX_CONFIG_IVAL="TODO:"
 export MENDIX_CONFIG_SVAL="TODO:"
+
+## Registry config - configure-template.yaml is updated with this information
+export MENDIX_REGISTRY_PULL_URL="ssmendixrepo.jfrog.io"
+export MENDIX_REGISTRY_PUSH_URL="ssmendixrepo.jfrog.io"
+export MENDIX_REGISTRY_NAME="default-docker-virtual/mendixapp"
+export MENDIX_AUTH_USER="TOD:O"
+export MENDIX_AUTH_PW="TODO:"
+

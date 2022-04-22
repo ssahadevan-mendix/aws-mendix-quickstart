@@ -6,7 +6,11 @@ echo "Ingress Loadbalancer IP is :" $lbIp
 
 #Replace address in configure-template.yaml and write to configure.yaml
 
-sed "s/domain: xxx.yyy/domain:  $lbIp.nip.io/g" configure-template.yaml 2>&1 | tee configure.yaml
+sed "s/domain: xxx.yyy/domain:  $lbIp.nip.io/g" configure-template.yaml 2>&1 | tee configure-temp.yaml
+
+# Update Registry information
+sed  "s/auth_user: <TODO:registry-user>/auth_user: $MENDIX_AUTH_USER/g" configure-temp.yaml 2>&1 | tee configure-temp1.yaml
+sed  "s/auth_password: <TODO:registry-pw>/auth_password: $MENDIX_AUTH_PW/g" configure-temp1.yaml 2>&1 | tee configure.yaml
 
 #Replace mode to standalone  and write to configure.yaml
 

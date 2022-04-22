@@ -43,10 +43,12 @@
     export MENDIX_CONFIG_IVAL="TODO:"
     export MENDIX_CONFIG_SVAL="TODO:"
 
-## Update configure-template.yaml
-
-    configure-template.yaml:    auth_user: <TODO:registry-user>
-    configure-template.yaml:    auth_password: <TODO:registry-pw>
+    ## Registry config - configure-template.yaml is updated with this information
+    export MENDIX_REGISTRY_PULL_URL="ssmendixrepo.jfrog.io"
+    export MENDIX_REGISTRY_PUSH_URL="ssmendixrepo.jfrog.io"
+    export MENDIX_REGISTRY_NAME="default-docker-virtual/mendixapp"
+    export MENDIX_AUTH_USER="TOD:O"
+    export MENDIX_AUTH_PW="TODO:"
 
 ## Ensure that you can run mxpc-cli
    Your Mac's security sesttings may prevent the downloaded mxpc-cli from executing.
@@ -66,7 +68,7 @@ Default is connected mode
 
     Added validate.sh that is called at the end of do-all.sh
     It will show if the result was Successful or not.
-    
+
     kubectl get pods -n new
 
     should show running pods ( connected mode )
@@ -93,6 +95,14 @@ Default is connected mode
    Example:
    http://ab5b2c0d274690ae9d506d21ed876-1145176934.us-east-2.elb.amazonaws.com:9090/
 
+
+## Generated files
+
+  generate-yamls.sh creates
+      configure.yaml
+      configure-standalone.yaml
+      demo.yaml
+      
 ## Screenshots
 
    https://github.com/ssahadevan-mendix/aws-mendix-quickstart/wiki
