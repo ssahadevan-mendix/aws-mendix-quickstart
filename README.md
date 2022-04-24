@@ -6,6 +6,12 @@
     Configure Namespace for mendix
     Deploys a mendix application
 
+
+## Acknowledgements
+
+   Thanks to Pablo Diaz, Dmitrii Zolotukhin for reviewing and providing feedback.
+   Thanks to Clyde Waal , Gautam Gautam who provided the ideas and inspiration as part of the Cloud Practice discussions.
+   
 ## Sequence Diagram
 
 ![Sequence Diagram](/images/sequence.png)
@@ -18,6 +24,7 @@
      Access keys for AWS cli
      ssh key pair for eksctl
      mxpc-cli - It is packaged here. Download and install the appropriate version from the Mendix platform
+     Docker compatible registry ( to push/pul any images )
 
 ## Note: This has been tested on an Apple Macintosh only
 
