@@ -27,6 +27,8 @@ export MENDIX_REGISTRY_NAME="default-docker-virtual\/mendixapp"
 export MENDIX_AUTH_USER="TODO:"
 export MENDIX_AUTH_PW="TODO:"
 
+# Switch for Minio and Postgres install - Y or N
+export INSTALL_POSTGRES_MINIO="Y"
 #Passwords for Postgres and Minio
 export MINIO_PW="TODO:"
 export POSTGRES_PW="TODO:"

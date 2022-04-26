@@ -13,11 +13,29 @@ database_plan:
 storage_plan:
   name: sptemp
   type: ephemeral
+database_plan:
+  name: postgres
+  type: postgres
+  postgres:
+    databaseprops:
+      host: postgres-shared-postgresql.privatecloud-storage.svc.cluster.local
+      port: 5432
+      user: postgres
+      password: <TODO:POSTGRES_PW>
+      strict_tls: false
+    db_name: postgres
+storage_plan:
+  name: minio
+  type: minio
+  minio:
+    endpoint: http://minio-shared.privatecloud-storage.svc.cluster.local:9000
+    accesskey: minioadmin
+    secretkey: <TODO:MINIO_SECRET>
 ingress:
   type: kubernetes-ingress
   enable_tls: false
   k8s_ingress:
-    domain: xxx.yyy
+    domain: <TODO:REPLACE-ME>
     useCustomIngressClass: true
     customIngressClass: nginx
     path: /
