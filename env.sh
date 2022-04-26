@@ -33,3 +33,6 @@ export INSTALL_POSTGRES_MINIO="Y"
 export MINIO_PW="TODO:"
 export POSTGRES_PW="TODO:"
 
+# Configure LInk to download Mendix Private Cloud CLI
+export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-linux-amd64.tar.gz"
+

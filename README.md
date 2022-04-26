@@ -11,7 +11,7 @@
 
    Thanks to Pablo Diaz, Dmitrii Zolotukhin for reviewing and providing feedback.
    Thanks to Clyde Waal , Gautam Gautam who provided the ideas and inspiration as part of the Cloud Practice discussions.
-   
+
 ## Sequence Diagram
 
 ![Sequence Diagram](/images/sequence.png)
@@ -58,6 +58,16 @@
     export MENDIX_REGISTRY_NAME="default-docker-virtual\/mendixapp"
     export MENDIX_AUTH_USER="TODO:"
     export MENDIX_AUTH_PW="TODO:"
+
+    # Switch for Minio and Postgres install - Y or N
+    export INSTALL_POSTGRES_MINIO="Y"
+    #Passwords for Postgres and Minio
+    export MINIO_PW="TODO:"
+    export POSTGRES_PW="TODO:"
+
+    # Configure LInk to download Mendix Private Cloud CLI
+    export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-linux-amd64.tar.gz"
+
 
 ## Ensure that you can run mxpc-cli
    Your Mac's security sesttings may prevent the downloaded mxpc-cli from executing.
