@@ -12,14 +12,10 @@ sed "s/domain: <TODO:REPLACE-ME>/domain:  $lbIp.nip.io/g" configure-template.yam
 
 echo $MENDIX_REGISTRY_PULL_URL $MENDIX_REGISTRY_PUSH_URL $MENDIX_REGISTRY_NAME
 
-sed -e "s/auth_user: <TODO:registry-user>/auth_user: $MENDIX_AUTH_USER/g" \ 
-    -e "s/auth_password: <TODO:registry-pw>/auth_password: $MENDIX_AUTH_PW/g" \
-     configure-temp.yaml 2>&1 | tee configure-temp-1.yaml
+sed -e "s/auth_user: <TODO:registry-user>/auth_user: $MENDIX_AUTH_USER/g" -e "s/auth_password: <TODO:registry-pw>/auth_password: $MENDIX_AUTH_PW/g" configure-temp.yaml 2>&1 | tee configure-temp-1.yaml
 
 # Update the minio and Postgres passwords from the environment variables
-sed -e "s/password: <TODO:POSTGRES_PW>/password: $POSTGRES_PW/g" \ 
-    -e "s/secretkey: <TODO:MINIO_SECRET>/secretkey: $MINIO_PW/g" \
-     configure-temp-1.yaml 2>&1 | tee configure-temp-2.yaml
+sed -e "s/password: <TODO:POSTGRES_PW>/password: $POSTGRES_PW/g" -e "s/secretkey: <TODO:MINIO_SECRET>/secretkey: $MINIO_PW/g" configure-temp-1.yaml 2>&1 | tee configure-temp-2.yaml
 
 sed  -e "s/auth_pull_url: <TODO:>/auth_pull_url: $MENDIX_REGISTRY_PULL_URL/g" \
      -e "s/auth_push_url: <TODO:>/auth_push_url: $MENDIX_REGISTRY_PUSH_URL/g" \

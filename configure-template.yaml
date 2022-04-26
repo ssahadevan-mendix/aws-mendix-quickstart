@@ -7,12 +7,12 @@ mask:
   registry: true
   proxy: false
   custom_tls: false
-database_plan:
-  name: dbtemp
-  type: ephemeral
-storage_plan:
-  name: sptemp
-  type: ephemeral
+#database_plan:
+# name: dbtemp
+# type: ephemeral
+#storage_plan:
+#  name: sptemp
+#  type: ephemeral
 database_plan:
   name: postgres
   type: postgres

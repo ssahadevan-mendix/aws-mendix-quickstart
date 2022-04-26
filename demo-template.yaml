@@ -5,7 +5,7 @@ metadata:
   namespace: new
 spec:
   database:
-    servicePlan: dbtemp
+    servicePlan: postgres
   mendixRuntimeVersion: 9.6.4.33791
   replicas: 1
   resources:
@@ -26,4 +26,4 @@ spec:
   appURL: demo.xxx.yyy # URL to access the app
   sourceVersion: 0.0.0.6
   storage:
-    servicePlan: sptemp
+    servicePlan: minio
