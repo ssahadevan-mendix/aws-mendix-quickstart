@@ -1,0 +1,4 @@
+
+
+echo "Downloading from " MENDIX_CLI_DOWNLOAD_LINK
+wget $MENDIX_CLI_DOWNLOAD_LINK 

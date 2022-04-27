@@ -18,11 +18,13 @@ mode=get-mode.sh
 . ./install-nginx-ingress.sh
 sleep 20
 
+### Install Postgres and Minio
+install-postgres-minio.sh
+
 ### Install Prometheus
 install-grafana-prometheus.sh
 
 sleep 40
-
 
 echo "$0: First parameter  is : " $1
 
@@ -30,8 +32,12 @@ echo "$0: First parameter  is : " $1
 . ./configure.sh mode
 
 
+sleep 40
+
 ### Deploy the application
 kubectl apply -f demo.yaml
+
+sleep 120
 
 validate.sh
 
