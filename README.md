@@ -93,6 +93,33 @@ Default is connected mode
     Result:
     validate.sh - Success: Number of running demo application pods is  1
 
+    Events:           <none>
+    default                ingress-ngnix-nginx-ingress-58d84f694d-8lj2f   1/1     Running   0          76m
+    grafana                loki-0                                         1/1     Running   0          66m
+    grafana                loki-grafana-bff99f7f6-447vh                   2/2     Running   0          66m
+    grafana                loki-kube-state-metrics-799f7cbf89-sl9zr       1/1     Running   0          66m
+    grafana                loki-prometheus-server-54b7bc4574-vd9rd        2/2     Running   0          66m
+    grafana                loki-promtail-4tcff                            1/1     Running   0          66m
+    grafana                loki-promtail-87ckc                            1/1     Running   0          66m
+    kube-system            aws-node-fnzvv                                 1/1     Running   0          79m
+    kube-system            aws-node-n54vd                                 1/1     Running   0          79m
+    kube-system            coredns-56b458df85-54mbk                       1/1     Running   0          91m
+    kube-system            coredns-56b458df85-q5bmj                       1/1     Running   0          91m
+    kube-system            kube-proxy-kzs5m                               1/1     Running   0          79m
+    kube-system            kube-proxy-vsxm2                               1/1     Running   0          79m
+    new                    demo-master-ff9b8d85f-vpwr9                    2/2     Running   0          64m
+    new                    mendix-agent-64cc6b9c67-7kz9p                  1/1     Running   0          65m
+    new                    mendix-operator-cc6dfcfd5-jj4xl                1/1     Running   0          65m
+    privatecloud-storage   minio-shared-5c799fdd4b-lw6sn                  1/1     Running   0          66m
+    privatecloud-storage   postgres-shared-postgresql-0                   1/1     Running   0          66m
+    Result: Count of pods running
+    validate.sh - Success: Number of running pods is  18
+
+    Result: Checking Application Pods
+    validate.sh - Success: Number of running demo application pods is  1
+
+    validate.sh   Application Url: demo.3.12.43.139.nip.io # URL to access the app
+    validate.sh   Prometheus Url:  a7e82c3f4d494411f846668234609d83-283292745.us-east-2.elb.amazonaws.com:9090
 
 ## Mendix application
   Mendix application will be available at apurl seen in the generated demo.yaml
