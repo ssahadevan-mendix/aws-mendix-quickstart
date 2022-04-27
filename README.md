@@ -88,11 +88,6 @@ Default is connected mode
     Added validate.sh that is called at the end of do-all.sh
     It will show if the result was Successful or not.
 
-    validate.sh - Success: Number of running pods is  16
-
-    Result:
-    validate.sh - Success: Number of running demo application pods is  1
-
     Events:           <none>
     default                ingress-ngnix-nginx-ingress-58d84f694d-8lj2f   1/1     Running   0          76m
     grafana                loki-0                                         1/1     Running   0          66m
