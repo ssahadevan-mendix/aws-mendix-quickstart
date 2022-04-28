@@ -24,7 +24,6 @@ install-postgres-minio.sh
 ### Install Prometheus
 install-grafana-prometheus.sh
 
-sleep 40
 
 echo "$0: First parameter  is : " $1
 
