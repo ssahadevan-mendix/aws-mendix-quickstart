@@ -1,10 +1,14 @@
 # Instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-monitor
 
-kubectl create ns grafana
-
 NAMESPACE=grafana
-#grafanaDomain=grafana.52.226.246.38.nip.io
-grafanaDomain=grafana.3.130.181.104.nip.io
+kubectl create ns $NAMESPACE
+
+# Sets the LB IP in environment variables
+# source ensure the exported value of lbIp is available here
+source getLbIp.sh
+
+#grafanaDomain=grafana.3.130.181.104.nip.io
+grafanaDomain=grafana.$lbIp.nip.io
 
 kubectl --namespace $NAMESPACE  create secret generic grafana-admin --from-literal=admin-user=admin --from-literal=admin-password=adminpw
 
@@ -16,7 +20,7 @@ helm upgrade --install loki grafana/loki-stack --version='^2.5.1' --namespace=${
 --set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false
 
 
-kubectl --namespace=$NAMESPACE create ingress loki-grafana \
+kubectl --namespace=$NAMESPACE create ingress loki-grafana --class=nginx \
 --rule="$grafanaDomain/*=loki-grafana:80,tls" \
 --default-backend="loki-grafana:80"
 

@@ -1,7 +1,7 @@
 #Get the  external IP address ip.nip.io
 
 # Find the load balancer IP address
-lbIp=$(kubectl get svc  | grep -i LoadBalancer | awk '{ print $4 }' | nslookup | tail -2 | grep Address | awk '{ print $2 }' )
+source getLbIp.sh
 echo "Ingress Loadbalancer IP is :" $lbIp
 
 #Replace address in configure-template.yaml and write to configure.yaml

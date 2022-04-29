@@ -12,11 +12,10 @@ chmod +x *.sh
 mode=get-mode.sh
 
 ### Create a cluster 
-. ./create-cluster.sh
+create-cluster.sh
 
 ### Install nginx
-. ./install-nginx-ingress.sh
-sleep 20
+install-nginx-ingress.sh
 
 ### Install Postgres and Minio
 install-postgres-minio.sh
@@ -24,15 +23,13 @@ install-postgres-minio.sh
 ### Install Prometheus
 install-grafana-prometheus.sh
 
-sleep 40
 
 echo "$0: First parameter  is : " $1
 
 ### Configure namespace for Mendix runtime
-. ./configure.sh mode
+configure.sh mode
 
 
-sleep 40
 
 ### Deploy the application
 kubectl apply -f demo.yaml
