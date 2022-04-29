@@ -16,7 +16,6 @@ create-cluster.sh
 
 ### Install nginx
 install-nginx-ingress.sh
-sleep 20
 
 ### Install Postgres and Minio
 install-postgres-minio.sh
@@ -31,7 +30,6 @@ echo "$0: First parameter  is : " $1
 configure.sh mode
 
 
-sleep 40
 
 ### Deploy the application
 kubectl apply -f demo.yaml

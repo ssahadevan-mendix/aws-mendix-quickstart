@@ -20,7 +20,7 @@ helm upgrade --install loki grafana/loki-stack --version='^2.5.1' --namespace=${
 --set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false
 
 
-kubectl --namespace=$NAMESPACE create ingress loki-grafana \
+kubectl --namespace=$NAMESPACE create ingress loki-grafana --class=nginx \
 --rule="$grafanaDomain/*=loki-grafana:80,tls" \
 --default-backend="loki-grafana:80"
 
