@@ -9,7 +9,7 @@
 . ./env.sh
 chmod +x *.sh
 
-mode=get-mode.sh
+mode=get-mode.sh $1
 
 ### Create a cluster 
 create-cluster.sh
