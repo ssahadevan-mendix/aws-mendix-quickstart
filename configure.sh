@@ -12,7 +12,7 @@ echo "Mode is $mode"
 
 . ./generate-yamls.sh 
 
-if [ $mode=$defaultMode ];
+if [[ $mode == $defaultMode ]];
 then
   echo "base install "
   mxpc-cli base-install --namespace new  -i $MENDIX_CONFIG_IVAL -s $MENDIX_CONFIG_SVAL --clusterMode connected  --clusterType generic
