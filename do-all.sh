@@ -5,6 +5,8 @@
 #
 #
 
+
+START=$(date +%s)
 #Sets the Environment variables
 . ./env.sh
 chmod +x *.sh
@@ -37,4 +39,8 @@ kubectl apply -f demo.yaml
 sleep 120
 
 validate.sh
+END=$(date +%s)
+
+DIFF=$(( $END - $START ))
+echo "$0 took $DIFF seconds "
 
