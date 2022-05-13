@@ -65,6 +65,9 @@
     export MINIO_PW="TODO:"
     export POSTGRES_PW="TODO:"
 
+    # Location of the MDA file. This will be used to generate the demo.yaml by generate-yaml.sh
+    export MENDIX_DEMO_MDA="https:\/\/demo-storage-d1eyl9oe4fo8ph151641-staging.s3.us-east-2.amazonaws.com\/public\/Main+line-0.0.0.6.mda"
+
     # Configure LInk to download Mendix Private Cloud CLI
     export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-linux-amd64.tar.gz"
 
@@ -117,19 +120,14 @@ Default is connected mode
     validate.sh   Prometheus Url:  a7e82c3f4d494411f846668234609d83-283292745.us-east-2.elb.amazonaws.com:9090
 
 ## Mendix application
-  Mendix application will be available at apurl seen in the generated demo.yaml
+    validate.sh will print the Mendix application url at the end of the script.
 
-  Example:
-  appURL: demo.18.118.31.87.nip.io        
+    validate.sh   Application Url: demo.3.12.43.139.nip.io # URL to access the app   
 
 ## Prometheus
-   Available at the external ip address of the prometheus svc port 9090
+   validate.sh will print the Prometheus URL at the end of execution.
 
-   kubectl get svc -n grafana | grep -i Loadbalancer
-
-   Example:
-   http://ab5b2c0d274690ae9d506d21ed876-1145176934.us-east-2.elb.amazonaws.com:9090/
-
+   validate.sh   Prometheus Url:  a7e82c3f4d494411f846668234609d83-283292745.us-east-2.elb.amazonaws.com:9090
 
 ## Generated files
 
@@ -138,6 +136,7 @@ Default is connected mode
       configure-standalone.yaml
       demo.yaml
 
+   These files are generated from configure-template.yaml and demo-template.yaml
 
 ## Deleting the cluster
 
@@ -150,3 +149,5 @@ Default is connected mode
 
 ## References
 Install the Mendix components on the cluster using the instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-cli-non-interactive
+
+![Install and configure with the GUI](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#4-installing-and-configuring-the-mendix-operator)

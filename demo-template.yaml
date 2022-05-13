@@ -22,8 +22,8 @@ spec:
     runtimeLicense: {}
     mxAdminPassword: cGFzc1cwcmQk
   runtimeMetricsConfiguration: {}
-  sourceURL: https://demo-storage-d1eyl9oe4fo8ph151641-staging.s3.us-east-2.amazonaws.com/public/Main+line-0.0.0.6.mda
-  appURL: demo.xxx.yyy # URL to access the app
+  sourceURL: <TODO:REPLACE-ME>
+  appURL: <TODO:REPLACE-ME>  #URL to access the Mendix app
   sourceVersion: 0.0.0.6
   storage:
     servicePlan: minio

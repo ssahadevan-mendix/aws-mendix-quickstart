@@ -33,6 +33,9 @@ export INSTALL_POSTGRES_MINIO="Y"
 export MINIO_PW="TODO:"
 export POSTGRES_PW="TODO:"
 
+# Location of the MDA file. This will be used to generate the demo.yaml by generate-yaml.sh
+export MENDIX_DEMO_MDA="https:\/\/demo-storage-d1eyl9oe4fo8ph151641-staging.s3.us-east-2.amazonaws.com\/public\/Main+line-0.0.0.6.mda"
+
 # Configure LInk to download Mendix Private Cloud CLI
 export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-linux-amd64.tar.gz"
 

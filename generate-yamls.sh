@@ -28,7 +28,7 @@ sed "s/cluster_mode: connected/cluster_mode: standalone/g" configure.yaml 2>&1 |
 
 #Replace address in demo-template.yaml and write to demo.yaml
 # Used for application deployment
-sed "s/appURL: demo.xxx.yyy/appURL: demo.$lbIp.nip.io/g" demo-template.yaml 2>&1 | tee demo.yaml
+sed -e "s/appURL: <TODO:REPLACE-ME>/appURL: demo.$lbIp.nip.io/g" -e "s/sourceURL: <TODO:REPLACE-ME>/sourceURL: $MENDIX_DEMO_MDA/g" demo-template.yaml 2>&1 | tee demo.yaml
 
 
 
