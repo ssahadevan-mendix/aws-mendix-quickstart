@@ -29,7 +29,7 @@ install-grafana-prometheus.sh
 echo "$0: First parameter  is : " $1
 
 ### Configure namespace for Mendix runtime
-configure.sh mode
+configure.sh $mode
 
 
 
