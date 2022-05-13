@@ -119,6 +119,8 @@ Default is connected mode
     validate.sh   Application Url: demo.3.12.43.139.nip.io # URL to access the app
     validate.sh   Prometheus Url:  a7e82c3f4d494411f846668234609d83-283292745.us-east-2.elb.amazonaws.com:9090
 
+    ./do-all.sh took 2792 seconds 
+
 ## Mendix application
     validate.sh will print the Mendix application url at the end of the script.
 
