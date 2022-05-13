@@ -119,7 +119,7 @@ Default is connected mode
     validate.sh   Application Url: demo.3.12.43.139.nip.io # URL to access the app
     validate.sh   Prometheus Url:  a7e82c3f4d494411f846668234609d83-283292745.us-east-2.elb.amazonaws.com:9090
 
-    ./do-all.sh took 2792 seconds 
+    ./do-all.sh took 2792 seconds
 
 ## Mendix application
     validate.sh will print the Mendix application url at the end of the script.
@@ -152,4 +152,4 @@ Default is connected mode
 ## References
 Install the Mendix components on the cluster using the instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-cli-non-interactive
 
-![Install and configure with the GUI](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#4-installing-and-configuring-the-mendix-operator)
+Install and configure with the GUI (https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#4-installing-and-configuring-the-mendix-operator)
