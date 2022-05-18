@@ -20,6 +20,7 @@ sed -e "s/password: <TODO:POSTGRES_PW>/password: $POSTGRES_PW/g" -e "s/secretkey
 sed  -e "s/auth_pull_url: <TODO:>/auth_pull_url: $MENDIX_REGISTRY_PULL_URL/g" \
      -e "s/auth_push_url: <TODO:>/auth_push_url: $MENDIX_REGISTRY_PUSH_URL/g" \
      -e "s/registry_name: <TODO:>/registry_name: $MENDIX_REGISTRY_NAME/g" \
+     -e "s/namespace: <TODO:REPLACE-ME>/namespace: $MENDIX_NAMESPACE/g" \
      configure-temp-2.yaml 2>&1 | tee configure.yaml
 
 #Replace mode to standalone  and write to configure.yaml
@@ -28,7 +29,11 @@ sed "s/cluster_mode: connected/cluster_mode: standalone/g" configure.yaml 2>&1 |
 
 #Replace address in demo-template.yaml and write to demo.yaml
 # Used for application deployment
-sed -e "s/appURL: <TODO:REPLACE-ME>/appURL: demo.$lbIp.nip.io/g" -e "s/sourceURL: <TODO:REPLACE-ME>/sourceURL: $MENDIX_DEMO_MDA/g" demo-template.yaml 2>&1 | tee demo.yaml
+# sed -e "s/appURL: <TODO:REPLACE-ME>/appURL: demo.$lbIp.nip.io/g" -e "s/sourceURL: <TODO:REPLACE-ME>/sourceURL: $MENDIX_DEMO_MDA/g" demo-template.yaml 2>&1 | tee demo.yaml
+sed -e "s/appURL: <TODO:REPLACE-ME>/appURL: demo.$lbIp.nip.io/g" \
+    -e "s/sourceURL: <TODO:REPLACE-ME>/sourceURL: $MENDIX_DEMO_MDA/g" \
+    -e "s/namespace: <TODO:REPLACE-ME>/namespace: $MENDIX_NAMESPACE/g" \
+     demo-template.yaml 2>&1 | tee demo.yaml
 
 
 

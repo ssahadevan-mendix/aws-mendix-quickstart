@@ -2,7 +2,7 @@ apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
 metadata:
   name: demo
-  namespace: new
+  namespace: <TODO:REPLACE-ME>
 spec:
   database:
     servicePlan: postgres

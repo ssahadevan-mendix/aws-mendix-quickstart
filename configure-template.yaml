@@ -1,4 +1,4 @@
-namespace: new
+namespace: <TODO:REPLACE-ME>
 cluster_mode: connected
 mask:
   database_plan: true
