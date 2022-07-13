@@ -1,0 +1,35 @@
+namespace: <TODO:REPLACE-ME>
+cluster_mode: connected
+mask:
+  database_plan: true
+  storage_plan: true
+  ingress: true 
+  registry: true
+  proxy: false
+  custom_tls: false
+database_plan:
+ name: dbtemp
+ type: ephemeral
+storage_plan:
+  name: sptemp
+  type: ephemeral
+ingress:
+  type: kubernetes-ingress
+  enable_tls: false
+  k8s_ingress:
+    domain: <TODO:REPLACE-ME>
+    useCustomIngressClass: true
+    customIngressClass: nginx
+    path: /
+  service: null
+registry:
+  type: generic
+  generic_registry:
+    auth_pull_url: <TODO:>
+    auth_push_url: <TODO:>
+    registry_name: <TODO:>
+    enable_auth: true
+    auth_user: <TODO:registry-user>
+    auth_password: <TODO:registry-pw>
+    link_secret_to_service_account: true
+

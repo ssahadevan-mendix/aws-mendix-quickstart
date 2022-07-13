@@ -1,0 +1,29 @@
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: demo
+  namespace: <TODO:REPLACE-ME>
+spec:
+  database:
+    servicePlan: dbtemp
+  mendixRuntimeVersion: 9.6.4.33791
+  replicas: 1
+  resources:
+    limits:
+      cpu: "1"
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+  runtime:
+    customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"InvestmentFunds.DemoMode\":\"False\",\"FinanceIntegration.YH_API_KEY\":\"\",\"FinanceIntegration.YH_LOCATION\":\"https://apidojo-yahoo-finance-v1.p.rapidapi.com\",\"AutoLogin.AutoLogin_Enabled\":\"False\",\"AutoLogin.AutoLoginUsername\":\"agent\",\"AutoLogin.Location\":\"autologin/\",\"AutoLogin.LoginLocation\":\"/index.html\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.1\",\"Atlas_NativeMobile_Content.Atlas_Native_Content_Version\":\"3.0.0\",\"Atlas_Web_Content.Atlas_Web_Content_Version\":\"3.0.1\"}"}'
+    dtapMode: D
+    logAutosubscribeLevel: INFO
+    runtimeLicense: {}
+    mxAdminPassword: cGFzc1cwcmQk
+  runtimeMetricsConfiguration: {}
+  sourceURL: <TODO:REPLACE-ME>
+  appURL: <TODO:REPLACE-ME>  #URL to access the Mendix app
+  sourceVersion: 0.0.0.6
+  storage:
+    servicePlan: sptemp
