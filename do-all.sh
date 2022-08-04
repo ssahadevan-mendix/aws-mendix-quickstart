@@ -26,6 +26,9 @@ install-postgres-minio.sh
 install-grafana-prometheus.sh
 
 
+### Install AWS ALB
+install-alb.sh
+
 echo "$0: First parameter  is : " $1
 
 ### Configure namespace for Mendix runtime
