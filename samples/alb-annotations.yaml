@@ -2,14 +2,14 @@
       annotations:
         alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig":{
           "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
-        alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:560695949771:certificate/9ff163b2-2b24-41d4-8bcf-110dfc078c05
+        alb.ingress.kubernetes.io/certificate-arn: <TODO:REPLACE-ME>
         alb.ingress.kubernetes.io/group.name: mendix
         alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
         alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=4000,deletion_protection.enabled=false
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip
         nginx.ingress.kubernetes.io/proxy-body-size: 500m
-      domain: ssmxdemo.net
+      domain: <TODO:REPLACE-ME>
       enableTLS: true
       ingressClassName: alb
       path: /*
