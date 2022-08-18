@@ -12,6 +12,7 @@ export CLUSTER_NAME="mxdemo"
 
 # Switch to create cluster or Not - Y or N
 export CREATE_CLUSTER="Y"
+export USE_SPOT_INSTANCES="Y"
 
 ## Used in configure.sh
 ## only required for connected mode -i and -s parameter
