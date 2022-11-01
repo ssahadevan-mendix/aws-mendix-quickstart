@@ -12,6 +12,8 @@ echo "Mode is $mode"
 
 . ./generate-yamls.sh 
 
+. ./install-mxpc-cli.sh
+
 if [[ $mode == $defaultMode ]];
 then
   echo "base install "
