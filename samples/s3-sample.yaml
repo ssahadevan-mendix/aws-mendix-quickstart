@@ -1,0 +1,22 @@
+namespace: new
+cluster_mode: connected
+mask:
+  database_plan: false
+  storage_plan: true
+  ingress: false
+  registry: false
+  proxy: false
+  custom_tls: false
+storage_plan:
+  name: s3test
+  type: amazon-s3
+  s3:
+    create_bucket: true
+    create_user: true
+    create_inline_policy: false
+    existing_bucket: ""
+    existing_policy: testarn
+    share_bucket: false
+    region: us-east-2
+    access_key: myaccesskey
+    secret_key: mysecretkey
