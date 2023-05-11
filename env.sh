@@ -38,7 +38,11 @@ export POSTGRES_PW="TODO:"
 export MENDIX_DEMO_MDA="https:\/\/demo-storage-d1eyl9oe4fo8ph151641-staging.s3.us-east-2.amazonaws.com\/public\/Main+line-0.0.0.6.mda"
 
 # Configure LInk to download Mendix Private Cloud CLI
-export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-macos-amd64.tar.gz"
+# export MENDIX_CLI_DOWNLOAD_LINK="https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-2.4.1-macos-amd64.tar.gz"
+# Used to download the right mxpc-cli version
+mendixOperatorVersion=2.10.1
+os=macos-amd64
+
 
 # Mendix namespace
 export MENDIX_NAMESPACE=new
