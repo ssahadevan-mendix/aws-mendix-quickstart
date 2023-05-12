@@ -1,4 +1,4 @@
-
+. ./env.sh
 
 pwd 
 rm mxpc-cli*.gz
