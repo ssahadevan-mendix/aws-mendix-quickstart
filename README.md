@@ -154,3 +154,10 @@ Default is connected mode
    Install the Mendix components on the cluster using the instructions here - https://docs.mendix.com/developerportal/deploy/private-cloud-cli-non-interactive
 
    Install and configure with the GUI (https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#4-installing-and-configuring-the-mendix-operator)
+
+## Troubleshooting
+
+### If loki-stack is in pending state
+    May be because add-ons are required in the eks cluster. Try running 
+    1. utils/fix-pvc.sh
+    2. Uninstall and Install the loki stack again.
