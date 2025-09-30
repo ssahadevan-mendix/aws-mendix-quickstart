@@ -1,7 +1,9 @@
 # If you run into an issue with the loki stack in pending status, it may be because it is waiting on add-ons.
 # this will help resolve that issue.
 
-clusterName="mxdemo"
+echo  "*** Starting fix-pvc.sh..."
+clusterName=${CLUSTER_NAME}
+echo "clusterName is " ${clusterName}
 eksctl create iamserviceaccount \
         --name ebs-csi-controller-sa \
         --namespace kube-system \
@@ -12,4 +14,5 @@ eksctl create iamserviceaccount \
         --approve
 
 
-eksctl create addon --name aws-ebs-csi-driver --cluster mxdemo
+eksctl create addon --name aws-ebs-csi-driver --cluster ${clusterName}
+echo  "*** Exitng fix-pvc.sh..."
